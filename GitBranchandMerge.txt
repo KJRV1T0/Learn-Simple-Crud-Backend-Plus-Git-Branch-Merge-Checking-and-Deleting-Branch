@@ -30,7 +30,7 @@ Merging -- You Merge your changes to the Main Branch
 
 git branch -d Branch_Name   -----> Delete from Local
 
-git push origin -delete Branch_Name -----> Delete from Remote (Deleted on GitHub)
+git push origin --delete Branch_Name -----> Delete from Remote (Deleted on GitHub)
 
 
 *If you want to rename your Branch =
