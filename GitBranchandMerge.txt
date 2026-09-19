@@ -49,4 +49,32 @@ git branch | find /c /v ""    -----> that will count the amount of branch you ha
 git branch -a    -----> that will show you the branches you have on both local and remote (github)
 
 
+*Additional Notes from Gemini =
+
+Reset : gunanya untuk ngedelete commit terakhir anda.
+
+Jika anda lupa utk fix file, tapi udh keburu git add ., maka (Type = git reset), lalu anda bisa balik fix your file.
+
+Jika anda lupa utk fix file, tapi udh keburu git add . + commit, maka (Type = git reset HEAD~1), lalu anda bisa balik fix your file. HEAD~1 artinya mundur 1 commit ke belakang.
+
+
+Ada 3 tipe reset =
+
+--soft ---> Uncommit, tetep staged files, local file edits tetep ada
+--mixed (default, git reset == git reset --mixed) ---> Uncommit, Unstages Files, local file edits tetep ada
+--hard (Dangerous) ---> Uncommit, Unstages Files, Discard your local file edits
+
+Stash (Temporary Drawer) :
+
+What it's for : Hiding away uncommitted, half-finished work so you get a clean working folder without making a junk commit.
+
+​Real-world scenario :
+
+You are halfway through writing a new feature on feature-branch. Your code is broken and incomplete. Suddenly, your teammate or teacher asks you to fix an urgent bug on main. Git won't let you switch branches cleanly with uncommitted, conflicting changes.
+
+Instead, you do this :
+
+Save work temporarily (type = git stash)
+Switch branches, do urgent work, and come back
+Restore your saved work (type = git stash pop)
 
