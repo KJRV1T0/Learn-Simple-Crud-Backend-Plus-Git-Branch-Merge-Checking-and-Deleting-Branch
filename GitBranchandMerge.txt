@@ -1,0 +1,45 @@
+Branching -- Using new branch (U can edit your files without interrupting your main Branch. It keeps your main
+Branch save) =
+
+1. Check your status, make sure it's on Main Branch (type = "git status")
+2. Create a new branch (type = "git branch Branch_Name")
+3. Switch to your new branch (type = "git checkout Branch_Name")
+4. In your Command Line, Add your New File (type = "type nul > NewFileName.ext")
+	type nul = create a new file without adding stuff in it.
+5. Check your status, make sure it's on your New Branch (type = "git status")
+
+--- Here you can do your changes. ---
+
+After finishing your current changes,
+
+6. Add your new changes to git. (Type = "git add .")
+7. Commit it, (Type = "git commit -m "added NewFileName.ext" ")
+	-m means message
+8. Push your New Branch, (Type = "git push -u origin Branch_Name")
+
+(Every New Changes you do, afterwards you need to git add . --> git commit --> git push -u origin Branch_Name). This will save your changes to github.
+
+Merging -- You Merge your changes to the Main Branch
+
+9. After you finished your whole changes and ready to merge it to the main, you need to switch to main. (Type = "git checkout main")
+10. Merge it. (Type = "git merge Branch_Name")
+11. You have merged your latest Branch to your Main Branch. Now push your main. (Type = "git push -u origin main")
+
+
+*If you want to delete your UnNeeded Branch =
+
+git branch -d Branch_Name   -----> Delete from Local
+
+git push origin -delete Branch_Name -----> Delete from Remote (Deleted on GitHub)
+
+
+*If you want to rename your Branch =
+
+git branch -m Branch_Name (If you're currently on that branch)
+
+git branch -m OldBranch_Name NewBranch_Name (If you're currently on a different branch)
+
+Then push your new branch name, then delete your old branch name.
+
+
+
