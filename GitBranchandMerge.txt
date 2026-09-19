@@ -42,4 +42,11 @@ git branch -m OldBranch_Name NewBranch_Name (If you're currently on a different 
 Then push your new branch name, then delete your old branch name.
 
 
+*If you want to search the amount of branches you have =
+
+git branch | find /c /v ""    -----> that will count the amount of branch you have on your local
+
+git branch -a    -----> that will show you the branches you have on both local and remote (github)
+
+
 
